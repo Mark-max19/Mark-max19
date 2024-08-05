@@ -1,0 +1,503 @@
+body{
+    background-color: #faebd7;
+}
+h1{
+    text-align: center;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Color de fondo del header */
+  z-index: 1000; /* Para que se superponga sobre otros elementos */
+  padding: 10px; /* Espacio entre el header y el contenido */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra debajo del header */
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding:5px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-desktop {
+    display: block;
+  }
+  
+  .nav-mobile {
+    display: none;
+  }
+  
+  .nav-desktop ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-desktop li {
+    margin-right: 20px;
+  }
+  
+  .nav-desktop a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .logo {
+    margin-left: 20px;
+  }
+  
+  /* Estilos para el menú móvil */
+  .nav-mobile {
+    position: relative;
+  }
+  
+  .menu-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 120px;
+  }
+  
+  .menu-toggle:hover {
+    background-color: #444;
+  }
+  
+  .nav-mobile ul {
+    list-style: none;
+    width: 120px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #433e3e;
+    padding: 10px;
+    display: none;
+    z-index: 5;
+  }
+  
+  .nav-mobile li {
+    margin-bottom: 10px;
+  }
+  .nav-mobile li a:hover{
+    background-color: white;
+    color: #333;
+  }
+  
+  .nav-mobile a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+ 
+  /* hacerlo responsive */
+  @media (max-width: 768px) {
+    .nav-desktop {
+      display: none;
+    }
+    .nav-mobile {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 0.5em;
+    }
+    .nav-mobile ul {
+      width: 100%;
+    }
+    .nav-mobile li {
+      margin-bottom: 5px;
+    }
+    .nav-mobile a {
+      font-size: 14px;
+    }
+  }
+  
+  /* Estilos para mostrar/ocultar el menú móvil */
+  .menu-toggle:hover + ul {
+    display: block;
+  }
+  
+  .menu-toggle:focus + ul {
+    display: block;
+  }
+/*buscador*/
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0px;
+    width: 500px; /* ancho del buscador */
+  }
+  
+  .search-bar input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .search-bar button[type="button"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .search-bar button[type="button"]:hover {
+    background-color: #444;
+  }
+  
+  /* Media queries para hacerlo responsive */
+  @media (max-width: 768px) {
+    .search-bar {
+      width: 150px; /* ancho del buscador en pantallas pequeñas */
+    }
+  }
+  
+@media (max-width: 480px) {
+  .search-bar {
+    width: 100px; /* ancho del buscador en pantallas muy pequeñas */
+    }
+}
+
+
+/* comida tarjetas */
+
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+
+
+
+
+
+
+
+/*tarjeta sobre nosotros */
+.about-card {
+    background-color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    width: 800px; /* ancho de la tarjeta */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.about-card-body {
+    padding: 20px;
+}
+  
+.about-card-body h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #337ab7;
+}
+  
+.about-card-body p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+.about-card {
+
+    margin: 40px auto; 
+}
+/* Tarjeta sobre nosotros */
+.about-card {
+  
+  max-width: 800px; /* ancho máximo de la tarjeta */
+  margin: 40px auto; /* margen para centrar la tarjeta */
+  padding: 30px; /* padding para dar espacio interior */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra para dar profundidad */
+}
+
+/* Media queries para hacerlo responsive */
+@media (max-width: 1200px) {
+  .about-card {
+    max-width: 600px; /* ancho máximo para pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    max-width: 400px; /* ancho máximo para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    max-width: 300px; /* ancho máximo para pantallas muy pequeñas */
+  }
+}
+
+
+/* Tarjeta de contacto */
+.contact-card {
+  max-width: 400px; /* ancho máximo de la tarjeta */
+  margin: 40px auto; /* margen para centrar la tarjeta */
+  padding: 30px; /* padding para dar espacio interior */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra para dar profundidad */
+  background-color: #fff; /* fondo blanco */
+  border-radius: 10px; /* bordes redondeados */
+}
+
+/* Estilos para los elementos de la tarjeta */
+.contact-card ul {
+  list-style: none; /* quitar estilo de lista */
+  padding: 0; /* quitar padding */
+  margin: 0; /* quitar margen */
+}
+
+.contact-card li {
+  margin-bottom: 20px; /* espacio entre elementos */
+}
+
+.contact-card i {
+  font-size: 24px; /* tamaño de los iconos */
+  margin-right: 10px; /* espacio entre icono y texto */
+}
+
+.contact-card span {
+  font-size: 18px; /* tamaño del texto */
+}
+
+/* Estilos para el formulario */
+.contact-card form {
+  margin-top: 30px; /* espacio entre la lista y el formulario */
+}
+
+.contact-card input, .contact-card textarea {
+  width: 100%; /* ancho del formulario */
+  padding: 10px; /* padding del formulario */
+  margin-bottom: 20px; /* espacio entre campos */
+  border: 1px solid #ccc; /* borde del formulario */
+  border-radius: 5px; /* bordes redondeados */
+}
+
+.contact-card button {
+  background-color: #4CAF50; /* fondo verde */
+  color: #fff; /* texto blanco */
+  padding: 10px 20px; /* padding del botón */
+  border: none; /* quitar borde */
+  border-radius: 5px; /* bordes redondeados */
+  cursor: pointer; /* cursor de mano */
+}
+
+/* Media queries para hacerlo responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    max-width: 300px; /* ancho máximo para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    max-width: 200px; /* ancho máximo para pantallas muy pequeñas */
+  }
+}
+
+/*pie de pagina */
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center;
+  color: #666;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+display: inline-block;
+margin-right: 20px;
+}
+
+.footer a {
+color: #666;
+text-decoration: none;
+}
+
+.footer a:hover {
+color: #333;
+}
+
+
+
+
+/* Estilos generales pagina compra */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.card {
+  margin: 20px;
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #3e8e41;
+}
+
+.checkout {
+  background-color: #FFC107;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.checkout:hover {
+  background-color: #FFA07A;
+}
+
+/*botton compra*/
+.button-h1 {
+  display: inline-block;
+  background-color: #000000;
+  color: rgb(190, 28, 28);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+.container1 {
+  text-align: center;
+  margin-top: 40px;
+}
+.button-h1:hover {
+  background-color: #323532;
+}
+
+/*ver-mas*/
+.section-mas{
+  width: 50%;
+  float: left;
+}
+.aside-mas{
+  width: 50%;
+  height: 80vh;
+  float: right;
+  margin-top: 90px;
+  
+  
+}
+.div-mas{
+  height: 50%;
+}
+.img{
+  height: 100%;
+  margin-top: 90px;
+}
+
+.div-mas-aside{
+  width: 100%;
+  margin-left:20px ;
+}
+
+
+
+
+
